@@ -1,0 +1,46 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug (OpenOCD + J-Link)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/Netmate.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "serverpath": "/opt/homebrew/bin/openocd",
+            "searchDir": [
+                "/opt/homebrew/share/openocd/scripts",
+                "${workspaceFolder}/.vscode"
+            ],
+            "configFiles": [
+                "${workspaceFolder}/.vscode/openocd-jlink.cfg"
+            ]
+        },
+        {
+            "name": "Cortex Debug (OpenOCD + J-Link, Erase)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/Netmate.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "serverpath": "/opt/homebrew/bin/openocd",
+            "searchDir": [
+                "/opt/homebrew/share/openocd/scripts",
+                "${workspaceFolder}/.vscode"
+            ],
+            "configFiles": [
+                "${workspaceFolder}/.vscode/openocd-jlink.cfg"
+            ],
+            "preLaunchCommands": [
+                "monitor reset halt",
+                "monitor stm32f2x mass_erase 0"
+            ]
+        }
+    ]
+}

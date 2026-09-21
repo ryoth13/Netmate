@@ -1,0 +1,12 @@
+{
+    "cmake.configureEnvironment": {
+        "PATH": "/Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/bin:${env:PATH}"
+    },
+    "cmake.buildEnvironment": {
+        "PATH": "/Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/bin:${env:PATH}"
+    },
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build/Debug",
+        "--query-driver=/Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc"
+    ]
+}
