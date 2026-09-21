@@ -42,7 +42,7 @@ Netmate 使用 ESP-01S 连接 OpenWrt 路由器，获取路由器运行状态和
 - Ninja
 - ARM GNU Toolchain
 - VS Code
-- OpenBCD
+- OpenOCD
 
 ### 必须 VS Code 扩展
 
