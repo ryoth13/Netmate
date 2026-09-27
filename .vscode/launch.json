@@ -12,9 +12,8 @@
             "type": "cortex-debug",
             "runToEntryPoint": "main",
             "servertype": "openocd",
-            "serverpath": "/opt/homebrew/bin/openocd",
+            "serverpath": "openocd",
             "searchDir": [
-                "/opt/homebrew/share/openocd/scripts",
                 "${workspaceFolder}/.vscode"
             ],
             "configFiles": [
@@ -29,9 +28,8 @@
             "type": "cortex-debug",
             "runToEntryPoint": "main",
             "servertype": "openocd",
-            "serverpath": "/opt/homebrew/bin/openocd",
+            "serverpath": "openocd",
             "searchDir": [
-                "/opt/homebrew/share/openocd/scripts",
                 "${workspaceFolder}/.vscode"
             ],
             "configFiles": [
@@ -39,8 +37,45 @@
             ],
             "preLaunchCommands": [
                 "monitor reset halt",
-                "monitor stm32f2x mass_erase 0"
+                "monitor stm32f4x mass_erase 0"
             ]
         }
+        // {
+        //     "name": "Cortex Debug (J-Link GDB Server)",
+        //     "cwd": "${workspaceFolder}",
+        //     "executable": "${workspaceFolder}/build/Debug/Netmate.elf",
+        //     "request": "launch",
+        //     "type": "cortex-debug",
+        //     "runToEntryPoint": "main",
+        //     "servertype": "jlink",
+        //     "serverpath": "C:/Program Files/SEGGER/JLink_V974/JLinkGDBServerCL.exe",
+        //     "device": "STM32F411CE",
+        //     "interface": "swd",
+        //     "serverArgs": [
+        //         "-speed",
+        //         "4000"
+        //     ]
+        // },
+        // {
+        //     "name": "Cortex Debug (J-Link GDB Server, Erase)",
+        //     "cwd": "${workspaceFolder}",
+        //     "executable": "${workspaceFolder}/build/Debug/Netmate.elf",
+        //     "request": "launch",
+        //     "type": "cortex-debug",
+        //     "runToEntryPoint": "main",
+        //     "servertype": "jlink",
+        //     "serverpath": "C:/Program Files/SEGGER/JLink_V974/JLinkGDBServerCL.exe",
+        //     "device": "STM32F411CE",
+        //     "interface": "swd",
+        //     "serverArgs": [
+        //         "-speed",
+        //         "4000"
+        //     ],
+        //     "preLaunchCommands": [
+        //         "monitor reset",
+        //         "monitor halt",
+        //         "monitor erase"
+        //     ]
+        // }
     ]
 }
