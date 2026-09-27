@@ -2,5 +2,10 @@
     "clangd.arguments": [
         "--compile-commands-dir=${workspaceFolder}/build/Debug",
         "--query-driver=*arm-none-eabi-gcc*"
-    ]
+    ],
+    "cmake.options.advanced": {
+        "launch": {
+            "statusBarVisibility": "hidden"
+        }
+    }
 }
