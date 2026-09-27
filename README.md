@@ -39,9 +39,9 @@ Netmate 使用 ESP-01S 连接 OpenWrt 路由器，获取路由器运行状态和
 
 - Git
 - [CMake](https://cmake.org/download/)
-- [Ninja]
+- [Ninja](https://github.com/ninja-build/ninja)
 - [ARM GNU Toolchain](https://gitlab.arm.com/tooling/gnu-toolchains-for-arm)
-- VS Code
+- [VS Code](https://code.visualstudio.com/download)
 - [OpenOCD](https://openocd.org/pages/getting-openocd.html)
 - [clang-llvm](https://github.com/llvm/llvm-project)
 
