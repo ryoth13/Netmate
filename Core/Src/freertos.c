@@ -22,6 +22,7 @@
 #include "task.h"
 #include "main.h"
 #include "cmsis_os.h"
+#include "iwdg.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -117,7 +118,9 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+      //HAL_IWDG_Refresh(&hiwdg);
+      osDelay(500);
   }
   /* USER CODE END StartDefaultTask */
 }

@@ -49,7 +49,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+volatile uint32_t boot_from_iwdg = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -100,7 +100,10 @@ int main(void)
   MX_SPI1_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+  __HAL_DBGMCU_FREEZE_IWDG();
+  boot_from_iwdg = (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST) != RESET) ? 1U : 0U;
 
+  __HAL_RCC_CLEAR_RESET_FLAGS();
   /* USER CODE END 2 */
 
   /* Init scheduler */
